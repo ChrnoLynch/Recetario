@@ -1,0 +1,45 @@
+<!--Cosas que falta:-->
+    <!--Editar-->
+    <!--Borrar-->
+    <!--Filtrar bien al hacer una nueva receta-->
+    <!--Poner fondo a la actividad principal-->
+    <!--Si queda tiempo botones para ordenar-->
+<resources>
+    <string name="app_name">Recetario</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_actividad_alta">ActividadAlta</string>
+    <string name="title_activity_actividad_categorias">actividadCategorias</string>
+   
+    //Layout Categorias   
+    <string name="categorias">Categorias</string>
+    <string name="arroces">Arroces y Pastas</string>
+    <string name="salsas">Salsas</string>
+    <string name="carne">Carne y Aves</string>
+    <string name="postres">Postres</string>
+    <string name="pescados">Pescados y Mariscos</string>
+    <string name="sopas">Sopas y Cremas</string>
+    <string name="potajes">Potajes</string>
+    <string name="verduras">Verduras y Hortalizas</string>
+    <string name="guarniciones">Guarniciones</string>
+    <string name="nombreReceta">Nombre de la Receta</string>
+    <string name="fotoReceta">Elegir Foto</string>
+    <string name="title_activity_actividad_lista_recetas">ActividadListaRecetas</string>
+    <string name="ingredientes">Ingredientes:</string>
+    <string name="añadir">Añadir Receta</string>
+    <string name="tituloIngredientes">Ingredientes:</string>
+    <string name="tituloInstrucciones">Instrucciones:</string>
+    <string name="utensilios">Utensilios:</string>
+    <string name="title_activity_actividad_visualizar">ActividadVisualizar</string>
+    <string name="borrar">Borrar</string>
+    <string name="editar">Editar</string>
+    <string name="tituloUtensilios">Utensilios:</string>
+    <string name="ingredienteHint">Ingrediente</string>
+    <string name="cantidadHint">Cantidad</string>
+    <string name="utensilioHint">Utensilio</string>
+    <string name="toastIngrediente">No hay ningun campo de ingrediente</string>
+    <string name="toastUtensilio">No hay ningun campo de utensilios</string>
+    <string name="toastCampos">No dejes el nombre o las instrucciones en blanco</string>
+
+</resources>

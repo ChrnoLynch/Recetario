@@ -1,0 +1,213 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.lprub.recetario.actividades.ActividadAlta"
+    android:background="#fae6ac">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner"
+                android:layout_alignParentTop="true"
+                android:spinnerMode="dropdown"
+                android:layout_toEndOf="@+id/textView11"
+                android:layout_toRightOf="@+id/textView11" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/categorias"
+                android:id="@+id/textView11"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignBottom="@+id/spinner"
+                android:gravity="center_vertical" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/etNombre"
+                android:layout_below="@+id/spinner"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:hint="@string/nombreReceta" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="10dp"
+                android:background="@drawable/separador"
+                android:layout_below="@+id/etNombre"
+                android:id="@+id/separator"
+                android:layout_margin="5dp" />
+
+            <ImageView
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:id="@+id/ivFoto"
+                android:src="@drawable/not"
+                android:layout_below="@+id/separator"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="10dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fotoReceta"
+                android:id="@+id/btImagen"
+                android:onClick="foto"
+                android:layout_below="@+id/separator"
+                android:layout_alignLeft="@+id/separator"
+                android:layout_alignStart="@+id/separator" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="5dp"
+                android:background="@drawable/separador2"
+                android:layout_below="@+id/ivFoto"
+                android:id="@+id/separator2"
+                android:layout_margin="5dp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:id="@+id/etInstrucciones"
+                android:layout_below="@+id/separator2"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignLeft="@+id/separator2"
+                android:layout_alignStart="@+id/separator2"
+                android:minLines="2"
+                android:hint="Instrucciones" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="5dp"
+                android:background="@drawable/separador2"
+                android:layout_below="@+id/etInstrucciones"
+                android:id="@+id/separator3"
+                android:layout_margin="5dp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ibMasIngredientes"
+                android:src="@android:drawable/ic_input_add"
+                android:layout_below="@+id/separator3"
+                android:layout_alignRight="@+id/ivFoto"
+                android:layout_alignEnd="@+id/ivFoto"
+                android:onClick="añadirIngrediente" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/ingredientes"
+                android:id="@+id/textView12"
+                android:layout_below="@id/separator3" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/textView12"
+                android:layout_alignLeft="@+id/separator3"
+                android:layout_alignStart="@+id/separator3"
+                android:id="@+id/layIngredientes"
+                android:columnCount="2"
+                android:minHeight="50dp">
+            </GridLayout>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ibMenosIngredientes"
+                android:src="@android:drawable/ic_delete"
+                android:onClick="deleteIngrediente"
+                android:layout_below="@+id/separator3"
+                android:layout_toLeftOf="@+id/ibMasIngredientes"
+                android:layout_toStartOf="@+id/ibMasIngredientes" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="5dp"
+                android:background="@drawable/separador2"
+                android:layout_below="@+id/layIngredientes"
+                android:id="@+id/separator4"
+                android:layout_margin="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/utensilios"
+                android:layout_below="@id/separator4"
+                android:id="@+id/tvTituloUtensilios"
+                />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/tvTituloUtensilios"
+                android:id="@+id/layUtensilios"
+                android:columnCount="1">
+            </GridLayout>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ibMasUtensilios"
+                android:src="@android:drawable/ic_input_add"
+                android:layout_below="@+id/separator4"
+                android:layout_alignRight="@+id/ivFoto"
+                android:layout_alignEnd="@+id/ivFoto"
+                android:onClick="añadirUtensilio" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ibMenosUtensilios"
+                android:src="@android:drawable/ic_delete"
+                android:onClick="deleteUtensilio"
+                android:layout_toLeftOf="@+id/ibMasUtensilios"
+                android:layout_toStartOf="@+id/ibMasUtensilios"
+                android:layout_below="@+id/separator4" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/añadir"
+                android:id="@+id/btFinalizar"
+                android:layout_below="@id/layUtensilios"
+                android:onClick="añadir"
+                android:layout_marginTop="30dp" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+
+</RelativeLayout>
